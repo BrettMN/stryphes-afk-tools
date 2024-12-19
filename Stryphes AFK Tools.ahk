@@ -35,6 +35,11 @@ vClickCheckBox_Click(thisCheckBox){
 
 mainGui.Show()
 
+!^c::{
+    clickCheckBox.Value := clickCheckBox.Value ? 0 : 1
+    ToggleClick()
+}
+
 Return
 
 StopAutoClick(*){
@@ -43,7 +48,7 @@ StopAutoClick(*){
 
 ToggleClick(){
 
-    state.clicker := !state.clicker
+  
 
     While clickCheckBox.Value = 1
     {
